@@ -8,7 +8,7 @@ export interface IMiddlewareOpts {
 }
 
 export const initMiddlewares = ({ app }: IMiddlewareOpts) => {
-    if(!app) return false
+    if(!app) return
 
     // Add CORS support.
     app.use(cors({
@@ -24,6 +24,4 @@ export const initMiddlewares = ({ app }: IMiddlewareOpts) => {
         extended: false,
         limit: '50mb'
     }))
-
-    return true
 }
