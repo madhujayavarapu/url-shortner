@@ -3,7 +3,13 @@
     "target": "ES6",
     "module": "NodeNext", 
     "outDir": "build",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowUnreachableCode": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*"]
 }
