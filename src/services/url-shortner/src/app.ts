@@ -1,5 +1,6 @@
 import express from 'express';
 import { initMiddlewares } from './middlewares';
+import { log } from './utils';
 
 export interface IAppOpts {
     port: number
@@ -16,7 +17,7 @@ export const initApp = ({ port }: IAppOpts) => {
 
     // Start server on port
     app.listen(port, () => {
-        console.log(`Server started on ${port}`)
+        log.info(`Server started on ${port}`)
     })
 
     return app
