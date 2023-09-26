@@ -1,0 +1,38 @@
+{
+  "name": "url-shortner",
+  "version": "1.0.0",
+  "description": "Shortner micro service responsible to generate short urls for provided url",
+  "main": "build/main.js",
+  "scripts": {
+    "dev": "",
+    "dev:ts": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "build": "tsc",
+    "start": "node build/main.js",
+    "prestart": "npm run build"
+  },
+  "keywords": [
+    "url",
+    "url-shortner",
+    "link-shortener"
+  ],
+  "author": "Madhu Jayavarapu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/helmet": "^4.0.0",
+    "@types/node": "^20.6.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0"
+  },
+  "engines": {
+    "node": "18.10.0"
+  }
+}
