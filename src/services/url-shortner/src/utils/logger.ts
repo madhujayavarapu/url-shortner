@@ -14,7 +14,12 @@ export const logger = pino({
     // TODO: Read from env variable.
     level: "info",
     useOnlyCustomLevels: true,
-    timestamp: true
+    timestamp: () => {
+        return ',"ts": ' + '"' + new Date().toISOString() + '"'
+    },
+    formatters: {
+        level: (label: string, _: number) => ({"level": label.toUpperCase()})
+    }
 })
 
 export const buildLogger = (logger, attrs) =>  {
