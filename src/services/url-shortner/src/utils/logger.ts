@@ -1,4 +1,4 @@
-import pino from 'pino';
+import pino, { Logger } from 'pino';
 
 const customLevels = {
   trace: 10,
@@ -22,8 +22,8 @@ export const logger = pino({
   },
 });
 
-export const buildLogger = (logger, attrs) => {
-  return logger.child(attrs);
+export const buildLogger = (logger: Logger, attrs: object): Logger => {
+  return logger.child(attrs) as Logger;
 };
 
 // TODO: try to add logger in the request obj by necessary info - Check feasibility.
