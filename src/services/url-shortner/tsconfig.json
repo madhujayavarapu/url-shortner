@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "declaration": true,
+    "declarationDir": "build/types",
+    "declarationMap": true,
+    "sourceMap": true,
     "module": "NodeNext", 
+    "target": "ES6",
     "outDir": "build",
+    "strict": true,
     "esModuleInterop": true,
     "allowUnreachableCode": false,
     "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": false,
     "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*"]
