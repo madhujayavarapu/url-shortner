@@ -4,11 +4,13 @@
   "description": "Shortner micro service responsible to generate short urls for provided url",
   "main": "build/main.js",
   "scripts": {
-    "dev": "",
-    "dev:ts": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier -w src",
     "build": "tsc",
-    "start": "node build/main.js",
-    "prestart": "npm run build"
+    "prestart": "npm run build",
+    "start": "node build/main.js"
   },
   "keywords": [
     "url",
@@ -23,6 +25,10 @@
     "@types/express": "^4.17.17",
     "@types/helmet": "^4.0.0",
     "@types/node": "^20.6.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.6"
   },
