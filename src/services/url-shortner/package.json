@@ -8,6 +8,7 @@
     "dev:ts": "ts-node-dev --respawn --transpile-only src/main.ts",
     "build": "tsc",
     "lint": "eslint src/ --fix",
+    "format": "prettier -w src",
     "start": "node build/main.js",
     "prestart": "npm run build"
   },
@@ -27,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.6"
   },
