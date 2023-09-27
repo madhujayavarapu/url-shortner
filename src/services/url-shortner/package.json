@@ -5,7 +5,8 @@
   "main": "build/main.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/main.ts",
-    "lint": "eslint src/ --fix",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
     "format": "prettier -w src",
     "build": "tsc",
     "prestart": "npm run build",
