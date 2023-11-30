@@ -1,0 +1,24 @@
+{
+  "name": "url-shortner",
+  "version": "1.0.0",
+  "description": "My idea is to build an application which can be used to build short urls for any url.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "up": "docker-compose up -d",
+    "down": "docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhujayavarapu/url-shortner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhujayavarapu/url-shortner/issues"
+  },
+  "homepage": "https://github.com/madhujayavarapu/url-shortner#readme"
+}

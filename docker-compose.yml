@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: biturl_pg
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: biturl
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    networks:
+      - biturl_network
+
+  pgadmin:
+    container_name: biturl_pgadmin
+    image: dpage/pgadmin4:7.8
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: dev@biturl.com
+      PGADMIN_DEFAULT_PASSWORD: Demo@123
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+      - "5500:80"
+    networks:
+      - biturl-network
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
+
+networks:
+  biturl-network:
+    driver: bridge
